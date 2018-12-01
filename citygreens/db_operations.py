@@ -71,9 +71,13 @@ def addToFavs(user,database,order):
 	dbase.close()
 
 from user import User
+import os
 
-def main():
+def main():	
+
 	database = "db.sqlite3_test"
+	if os.path.isfile(database):
+		os.remove(database)
 
 	clt1 = User("carlos","ashda@gmail.com","1234568","26-4-1998","rua da cena","1982131",False)
 	clt2 = User("joao","aadsaf@gmail.com","12528","12-5-1958","rua de cima ","2131",False)
@@ -81,7 +85,7 @@ def main():
 	suppl1 = User("pedro","asafaa@gmail.com","145568","6-1-1988","rua carsa","19821",True)
 	suppl2 = User("manel","aajaa@gmail.com","1298768","2-10-1978","rua arale","131",True)
 	suppl3 = User("tiago","aLAKa@gmail.com","1564268","16-12-1948","rua porta","121131",True)
-	#createTable(database)
+	createTable(database)
 	addUser(clt1,database)
 	addUser(clt2,database)
 	addUser(clt3,database)
