@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'shop',
+    'cart',
     'accounts.apps.AccountsConfig',
     'loja.apps.LojaConfig',
     'django.contrib.admin',
@@ -128,3 +130,8 @@ LOGOUT_REDIRECT_URL = 'home'
 #when reset password it will send email to dir in project root
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+CART_SESSION_ID = 'cart'
