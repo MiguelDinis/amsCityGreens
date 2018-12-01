@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'loja.apps.LojaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -123,3 +124,7 @@ STATIC_URL = '/static/'
 #redirect the user to the homepage
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+#when reset password it will send email to dir in project root
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
