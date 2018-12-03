@@ -34,13 +34,15 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'accounts.apps.AccountsConfig',
-    'loja.apps.LojaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orders',
+    'paypal.standard.ipn',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+#django-paypal settings
+PAYPAL_RECEIVER_EMAIL = 'grupo305ams@hotmail.com'
+PAYPAL_TEST = True
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# email configuration
+EMAIL_HOST = 'smtp.hotmail.com'
+EMAIL_HOST_USER = 'grupo305ams@hotmail.com'
+EMAIL_HOST_PASSWORD = 'grupoams305'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
