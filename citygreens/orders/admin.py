@@ -49,10 +49,9 @@ order_pdf.short_description = 'PDF bill'
 
 
 class OrderAdmin(admin.ModelAdmin):
-	#list_display = ['id', 'first_name', 'last_name', 'email', 'address', 'postal_code', 'city', 'paid', 'created', 'updated', order_detail, order_detail]
 	list_display = ['id', 'first_name', 'last_name', 'email', 'address', 'postal_code', 'city', 'paid', 'created', 'updated']
 	list_filter = ['paid', 'created', 'updated']
 	inlines = [OrderItemInline]
-	actions = [export_to_csv]
+	#actions = [export_to_csv]
 
 admin.site.register(Order, OrderAdmin)
