@@ -1,6 +1,6 @@
 from decimal import Decimal
 from django.conf import settings
-from django.urls import reverse
+from django.core.urlresolvers import reverse
 from django.shortcuts import render, get_object_or_404
 from paypal.standard.forms import PayPalPaymentsForm
 from orders.models import Order
@@ -8,12 +8,13 @@ from django.views.decorators.csrf import csrf_exempt
 
 def payment_process(request):
 	order_id = request.session.get('order_id')
-	order = get_object_or_404(Order, id=order_id)
+	#order = get_object_or_404(Order, id=order_id)
+	order = Order.objects.filter(id = order_id)
 	host = request.get_host()
 
 	paypal_dict = {
 		'business': settings.PAYPAL_RECEIVER_EMAIL,
-		'amount': '%.2f' % order.get_total_cost().quantize(Decimal('.01')),
+		'amount': '%.2f' % Order.get_total_cost().quantize(Decimal('.01')),
 		'item_name': 'Order {}'.format(order.id),
 		'invoice': str(order.id),
 		'currency_code': 'EUR',

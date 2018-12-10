@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Order, OrderItem
 from django.http import HttpResponse
-from django.urls import reverse
+from django.core.urlresolvers import reverse
 import csv
 import datetime
 
