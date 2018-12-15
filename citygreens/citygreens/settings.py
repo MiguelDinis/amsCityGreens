@@ -127,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
@@ -144,8 +145,6 @@ CART_SESSION_ID = 'cart'
 #django-paypal settings
 PAYPAL_RECEIVER_EMAIL = 'grupo305ams@hotmail.com'
 PAYPAL_TEST = True
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # email configuration
 EMAIL_HOST = 'smtp.hotmail.com'
