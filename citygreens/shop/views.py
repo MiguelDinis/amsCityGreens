@@ -12,7 +12,9 @@ def product_list(request, category_slug=None):
     
     return render(request, 'shop/product/list.html', {'category': category,
                                                       'categories': categories,
-                                                      'products': products})
+                                                      'products': products,
+                                                      'section': 'shop'}
+                                                      )
 
 
 def product_detail(request, id, slug):

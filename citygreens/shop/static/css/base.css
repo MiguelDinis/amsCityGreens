@@ -12,16 +12,16 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#5993bb;
+    color:#176300;
 }
 
 a:hover {
-    color:#77b6e2;
+    color:#efefef;
 }
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
+    background:#56ad41;
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
@@ -63,7 +63,7 @@ tbody tr.subtotal {
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
+    background:#6dbd3c;
     color:#fff;
     font-weight:bold;
 }
@@ -123,8 +123,9 @@ ul.errorlist {
 }
 
 #subheader {
-    background:#ececec;
-    color:#444;
+    background:#b3e097;
+    color:#333;
+    font-weight: bold;
     padding:15px 100px;
     overflow:auto;
 }
@@ -139,6 +140,34 @@ ul.errorlist {
 
 #subheader .cart {
     float:right;
+    padding-top:4px;
+}
+
+#subheader ul.menu {
+    list-style:none;
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+#subheader ul.menu li {
+    float:left;
+    padding:4px 10px;
+}
+
+#subheader ul.menu li.selected a, #header ul.menu li.selected a:hover {
+    color:#ffffff;
+    font-weight:bold;
+}
+
+#subheader .user {
+    float:right;
+    padding-top:4px;
+}
+
+#subheader .cart {
+    float:left;
+    padding-left: 15px;
     padding-top:4px;
 }
 
@@ -169,7 +198,7 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background:#56ad41;
     border-radius:4px;
 }
 
@@ -194,6 +223,7 @@ ul.errorlist {
 
 .product-list .item img {
     width:100%;
+    max-width: 70%;
     margin-bottom:8px;
 }
 
@@ -228,14 +258,14 @@ ul.errorlist {
 .order-info {
     float:right;
     width:300px;
-    background:#efefef;
+    background:#b3e097;
     padding:10px 20px;
     color:#333;
-    border-bottom:4px solid #5993bb;
+    border-bottom:4px solid #2e6402;
 }
 
 .order-info h3 {
-    color:#5993bb;
+    color:#326b0f;
 }
 
 .order-info ul li {
@@ -313,4 +343,12 @@ ul.errorlist {
 
 .recommendations.cart img {
     width:120px;
+}
+
+.helptext {
+    margin:0 0 20px 0;
+    color:#aaa;
+    clear:both;
+    float:left;
+    font-size:13px;
 }

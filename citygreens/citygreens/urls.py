@@ -22,9 +22,10 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('home.urls')),
+    url(r'^shop/', include('shop.urls', namespace='shop')),
+    url(r'^account/', include('account.urls')),
     #path('', include('loja.urls')),
-    url(r'^accounts/', include('accounts.urls')),
-    url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^cart/', include('cart.urls', namespace='cart')),
     #path('', TemplateView.as_view(template_name='home.html'), name='home'),
     url(r'^orders/', include('orders.urls', namespace='orders')),

@@ -11,6 +11,22 @@
         <a href="/" class="logo"><img src="{% static "img/logo.png" %}"> </a>
     </div>
     <div id="subheader">
+        <ul class="menu">
+            <li {% if section == "home" %}class="selected"{% endif %}><a href="{% url "home" %}">Home</a></li>  
+             <li {% if section == "shop" %}class="selected"{% endif %}><a href="{% url "shop:product_list" %}">Shop</a></li>     
+            {% if request.user.is_authenticated %}
+            <li {% if section == "dashboard" %}class="selected"{% endif %}><a href="{% url "dashboard" %}">My profile</a></li>
+            {% endif %}
+        </ul>
+
+        <span class="user">
+        {% if request.user.is_authenticated %}
+            Hi! {{ request.user }}, <a href="{% url "logout" %}">Logout</a>
+        {% else %}
+            <a href="{% url "login" %}">Log-in</a>
+        {% endif %}
+        </span>
+        
         <div class="cart">
             {% with total_items=cart|length %}
                 {% if cart|length > 0 %}
