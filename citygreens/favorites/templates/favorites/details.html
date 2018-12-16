@@ -1,0 +1,38 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+    Your Favorites
+{% endblock %}
+
+{% block content %}
+    <h1>Your Favorites</h1>
+    <table class="favorites">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Remove</th>
+                <th>Unit price</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in favs %}
+            <tr>
+                <td>
+                    <a href="{{ product.get_absolute_url }}">
+                        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                    </a>
+                </td>
+
+                <td>{{ product.name }}</td>
+                <td><a href="{% url "favorites:favs_remove" product.id %}">Remove</a></td>
+                <td class="num">${{ product.price }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p class="text-right">
+        <a href="{% url "shop:product_list" %}" class="button light">Continue shopping</a>
+    </p>
+{% endblock %}

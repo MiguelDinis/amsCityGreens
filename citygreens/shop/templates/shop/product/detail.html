@@ -16,6 +16,17 @@
             {% csrf_token %}
             <input type="submit" value="Add to cart">
         </form>
+        {% if not product.is_favorite %}
+        <form action="{% url "favorites:favs_add" product.id %}" method="post">
+            {% csrf_token %}
+            <input type="image" src="/static/img/noHeart.png" style="width:2%; height:2%">
+        </form>
+        {% else %}
+        <form action="{% url "favorites:favs_remove" product.id %}" method="post">
+            {% csrf_token %}
+            <input type="image" src="/static/img/heart.png" style="width:2%; height:2%">
+        </form>
+        {% endif %}
         {{ product.description|linebreaks }}
     </div>
 {% endblock %}

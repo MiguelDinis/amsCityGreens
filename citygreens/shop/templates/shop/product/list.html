@@ -17,6 +17,9 @@
                 <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
             </li>
         {% endfor %}
+            <li>
+                <a href="{% url "favorites:favs_list" %}">Favorites</a>
+            </li>
         </ul>
     </div>
     <div id="main" class="product-list">
