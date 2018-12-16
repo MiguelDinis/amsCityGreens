@@ -19,10 +19,11 @@
 		</ul>
 		<p>Total: ${{ cart.get_total_price }}</p>
 	</div>
-
+	{% if not request.user.is_authenticated %}
 	<form action="." method="post" class="order-form">
 		{{ form.as_p }}
 		<p><input type="submit" value="Place order"></p>
 		{% csrf_token %}
 	</form>
+	{% endif %}
 {% endblock %}
