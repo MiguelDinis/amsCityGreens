@@ -337,47 +337,7 @@ section {
 .blog-sec .blog-image-block img {
 	border-radius: 5px;
 }
-/*-------------- Video section  --------------*/
-.video-sec {
-	background: url('../img/video-bg.jpg') 50% 0 repeat-y fixed;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center center;
-	text-align: center;
-	position: relative;
-	color: #fff;
-}
-.video-sec .overlay {
-	background: rgba(03,03,03,0.6);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-}
-.video-sec h2 {
-	color: #ffffff;
-	padding-top: 20px;
-	padding-bottom: 16px;
-}
-.video-sec small {
-	color: #fff;
-	display: block;
-	margin-top: 10px;
-	font-family: 'Lato', sans-serif;
-	font-size: 18px;
-}
-.video-sec .fa {
-	position: relative;
-	border: 2px solid #ffffff;
-	border-radius: 100px;
-	color: #ffffff;
-	font-size: 28px;
-	width: 80px;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;
-	vertical-align: middle;
-	margin-top: 22px;
+
 }
 /*-------------- Gallery section  --------------*/
 
