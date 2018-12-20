@@ -454,23 +454,7 @@ section {
 	width: 100%;
 	display: block;
 }
-/* CALL TO ACTION
--------------------------------------------------- */
-.cta-block {
-	background: url("../img/cta-bg.jpg") repeat;
-	padding: 30px 0;
-	color: #fff;
-	text-transform: capitalize
-}
-.cta-block h4 {
-	margin-bottom: 10px;
-	font-weight: 700;
-	font-size: 28px;
-}
-.cta-block p {
-	margin-bottom: 0;
-	font-size: 18px;
-}
+
 /* ABOUT SECTION
 -------------------------------------------------- */
 
