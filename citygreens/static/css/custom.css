@@ -549,51 +549,7 @@ section {
 	padding-right: 50px;
 }
 
-/* TESTIMONIAL SECTION
--------------------------------------------------- */
 
-.testimonial-sec {
-	background: #01BF86;
-}
-.testimonial-sec h2 {
-	display: block;
-	text-transform: capitalize;
-	font-weight: 600;
-	color: #fff;
-	margin-bottom: 50px;
-}
-.testimonial-sec h2 small {
-	display: block;
-	font-size: 24px;
-	margin-top: 10px;
-}
-.testimonial-sec .card {
-	background: #fff;
-	border: none;
-	padding-top: 30px;
-	border-radius: 16px;
-	box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-}
-.testimonial-sec .card img {
-	border-radius: 50%;
-	width: 150px;
-	border: 7px solid #01BF86
-}
-.testimonial-sec .card h3 {
-	color: #01BF86
-}
-.testimonial-sec .card h3 small {
-	display: block;
-	font-family: 'Source Sans Pro', sans-serif;
-	text-transform: uppercase;
-	color: #4c4c4c;
-	font-size: 17px;
-	margin-top: 5px;
-}
-.testimonial-sec .card .card-text {
-	font-style: italic;
-	padding: 0 20px
-}
 /* CONTACT SECTION
 -------------------------------------------------- */
 .contact-sec {
