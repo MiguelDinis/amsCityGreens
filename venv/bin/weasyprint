@@ -1,12 +1,11 @@
 #!/home/msilva/Desktop/UA/3ano/1semestre/AMS/Projeto/amsCityGreens/venv/bin/python3
-# EASY-INSTALL-ENTRY-SCRIPT: 'WeasyPrint==0.24','console_scripts','weasyprint'
-__requires__ = 'WeasyPrint==0.24'
+
+# -*- coding: utf-8 -*-
 import re
 import sys
-from pkg_resources import load_entry_point
+
+from weasyprint.__main__ import main
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(
-        load_entry_point('WeasyPrint==0.24', 'console_scripts', 'weasyprint')()
-    )
+    sys.exit(main())
