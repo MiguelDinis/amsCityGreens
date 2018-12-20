@@ -27,6 +27,10 @@ def payment_process(request):
 
 @csrf_exempt
 def payment_done(request):
+	order_id = request.session.get('order.id')
+	order = get_object_or_404(Order, id=order_id)
+	order.paid = True
+	order.save()
 	return render(request, 'payment/done.html')
 
 @csrf_exempt

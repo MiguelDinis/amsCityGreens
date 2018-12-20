@@ -20,11 +20,8 @@ def order_create(request):
 				OrderItem.objects.create(order=order, product=item['product'], price=item['price'], quantity=item['quantity'])
 			# clear the cart
 			cart.clear()
-			# launch asynchronous task
-			#order_created.delay(order.id)	# set the order in the session
 			
-			#### 2 for paypal not implemented yet(ERROR: Page Not Found in payment/process )
-			request.session['order.id'] = order.id 	# redirect to the payment
+			request.session['order.id'] = order.id
 			return redirect(reverse('payment:process'))
 			
 			#return render(request,'orders/order/created.html', {'order':order})
