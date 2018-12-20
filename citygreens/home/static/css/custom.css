@@ -548,40 +548,7 @@ section {
 	padding-left: 50px;
 	padding-right: 50px;
 }
-/* QA SECTION
--------------------------------------------------- */
-.qa-section {
-	background: url(../img/section-bg-white.jpg) no-repeat 0 bottom #f5f5f5;
-	background-size: cover;
-}
-.qa-section h2 {
-	color: #4c4c4c;
-	font-weight: 600;
-	text-transform: capitalize;
-	text-align: center;
-	margin-bottom: 50px;
-}
-.qa-section h2 small {
-	color: #01BF86;
-	display: block;
-	line-height: 27px;
-	margin-top: 10px;
-}
-.qa-section .card-header h5 a.collapsed {
-	color: #01BF86;
-}
-.qa-section .card-header h5 a {
-	color: #01BF86;
-	;
-	font-weight: 500;
-	font-size: 25px;
-}
-.qa-section .card-header h5 a:hover, .qa-section .card-header h5 a:focus {
-	text-decoration: none;
-}
-.qa-section .card-header {
-	background: #0C242E
-}
+
 /* TESTIMONIAL SECTION
 -------------------------------------------------- */
 
