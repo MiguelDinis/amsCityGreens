@@ -2,7 +2,6 @@ from decimal import Decimal
 from django.conf import settings
 from shop.models import Product
 
-
 class Favorites(object):
 
     def __init__(self, request):
@@ -10,6 +9,7 @@ class Favorites(object):
         Initialize the cart.
         """
         self.session = request.session
+        print(self.session.keys())
         if 'favorites.id' not in self.session.keys():
             request.session['favorites.id'] = {}
         
